@@ -24,6 +24,7 @@ class FetchCalendarEventsCommand extends Command
 
                     return [
                         'name' => $event->name,
+                        'location' => $event->location,
                         'date' => Carbon::createFromFormat('Y-m-d H:i:s', $sortDate)->format(DateTime::ATOM),
                     ];
                 })
